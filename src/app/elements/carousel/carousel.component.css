@@ -1,0 +1,13 @@
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+  }
+  
+  .carousel-image {
+    height: 600px; /* You can adjust the height as needed */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }

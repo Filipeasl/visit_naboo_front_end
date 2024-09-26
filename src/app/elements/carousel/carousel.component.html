@@ -1,0 +1,23 @@
+<section>
+    <div class="relative w-full overflow-hidden">
+        <!-- Carousel Wrapper -->
+        <div class="flex transition-transform duration-500" [style.transform]="transform">
+          <!-- Carousel Items -->
+          <div *ngFor="let image of images; let i = index" class="w-full flex-shrink-0 carousel-image">
+            <img [src]="image" class="w-full h-[600px] object-cover" alt="Slide {{ i + 1 }}" />
+          </div>
+        </div>
+      
+        <!-- Controls -->
+        <button (click)="prevSlide()" class="absolute top-1/2 left-0 p-2 bg-gray-700 text-white rounded-full -translate-y-1/2 hover:bg-gray-900">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+        <button (click)="nextSlide()" class="absolute top-1/2 right-0 p-2 bg-gray-700 text-white rounded-full -translate-y-1/2 hover:bg-gray-900">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+    </div>
+</section>
